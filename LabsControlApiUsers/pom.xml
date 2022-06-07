@@ -66,6 +66,8 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!-- spring-cloud-starter-config & spring-cloud-starter-bootstrap -->
+        <!-- Dependencies need to be a client of Config Server -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
