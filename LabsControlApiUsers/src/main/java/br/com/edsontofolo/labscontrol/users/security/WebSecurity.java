@@ -30,9 +30,9 @@ public class WebSecurity {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         HttpSecurity httpSecurity = http.csrf().disable()
                 .headers().frameOptions().disable().and() // Para funcionar o console do H2Database
-                .authorizeRequests(authz ->
-                        authz.antMatchers("/api/users/**").hasIpAddress(env.getProperty("gateway.ip")).and()
-                                .addFilter(getAuthenticationFilter())
+                .authorizeRequests(authz -> authz
+                        .antMatchers("/api/users/**").hasIpAddress(env.getProperty("gateway.ip")).and()
+                        .addFilter(getAuthenticationFilter())
                 );
         return httpSecurity.build();
     }

@@ -6,29 +6,29 @@ import br.com.edsontofolo.labscontrol.users.ui.model.CreateUserRequestModel;
 import br.com.edsontofolo.labscontrol.users.ui.model.CreateUserResponseModel;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.net.URI;
 
 @RestController
 @RequestMapping("/api/users")
-public class UserController {
+public class UsersController {
 
     private final UsersService usersService;
     private final Environment env;
 
-    public UserController(UsersService usersService, Environment env) {
+    public UsersController(UsersService usersService, Environment env) {
         this.usersService = usersService;
         this.env = env;
     }
 
     @GetMapping("/status/check")
     public String status() {
-        return "Working on port " + env.getProperty("local.server.port");
+        return "Working on port=" + env.getProperty("local.server.port") + " and with token=" + env.getProperty("token.secret");
     }
 
     @PostMapping
