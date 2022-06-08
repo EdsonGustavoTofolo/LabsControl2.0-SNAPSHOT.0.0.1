@@ -31,9 +31,10 @@ public class WebSecurity {
         HttpSecurity httpSecurity = http.csrf().disable()
                 .headers().frameOptions().disable().and() // Para funcionar o console do H2Database
                 .authorizeRequests(authz -> authz
-                        .antMatchers("/api/users/**").hasIpAddress(env.getProperty("gateway.ip")).and()
-                        .addFilter(getAuthenticationFilter())
-                );
+                        .antMatchers(env.getProperty("api.users.actuator.url.path")).permitAll()
+                        .antMatchers("/api/users/**").hasIpAddress(env.getProperty("gateway.ip"))
+                        .and()
+                        .addFilter(getAuthenticationFilter()));
         return httpSecurity.build();
     }
 
