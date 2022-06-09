@@ -7,6 +7,7 @@ import br.com.edsontofolo.labscontrol.users.ui.model.AlbumResponseModel;
 import br.com.edsontofolo.labscontrol.users.ui.model.CreateUserRequestModel;
 import br.com.edsontofolo.labscontrol.users.ui.model.CreateUserResponseModel;
 import br.com.edsontofolo.labscontrol.users.ui.model.UserResponseModel;
+import feign.FeignException;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.core.ParameterizedTypeReference;
@@ -84,7 +85,6 @@ public class UsersController {
         UserResponseModel returnValue = mapper.map(userDto, UserResponseModel.class);
 
         List<AlbumResponseModel> albumsList = albumsServiceClient.getAlbums(userId);
-
         returnValue.setAlbums(albumsList);
 
         return ResponseEntity.ok(returnValue);

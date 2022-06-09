@@ -1,5 +1,6 @@
 package br.com.edsontofolo.labscontrol;
 
+import br.com.edsontofolo.labscontrol.users.shared.FeignErrorDecoder;
 import feign.Logger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -31,7 +32,12 @@ public class LabsControlApiUsersApplication {
     }
 
     @Bean
-    Logger.Level feignLogerLevel() {
+    public Logger.Level feignLogerLevel() {
         return Logger.Level.FULL;
     }
+
+//    @Bean
+//    public FeignErrorDecoder getFeignErrorDecoder() {
+//        return new FeignErrorDecoder(env);
+//    }
 }
