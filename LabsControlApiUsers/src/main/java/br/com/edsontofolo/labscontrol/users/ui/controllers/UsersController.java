@@ -2,17 +2,22 @@ package br.com.edsontofolo.labscontrol.users.ui.controllers;
 
 import br.com.edsontofolo.labscontrol.users.service.UsersService;
 import br.com.edsontofolo.labscontrol.users.shared.UserDto;
+import br.com.edsontofolo.labscontrol.users.ui.model.AlbumResponseModel;
 import br.com.edsontofolo.labscontrol.users.ui.model.CreateUserRequestModel;
 import br.com.edsontofolo.labscontrol.users.ui.model.CreateUserResponseModel;
+import br.com.edsontofolo.labscontrol.users.ui.model.UserResponseModel;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
-import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.core.env.Environment;
+import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/users")
@@ -20,10 +25,12 @@ public class UsersController {
 
     private final UsersService usersService;
     private final Environment env;
+    private final RestTemplate restTemplate;
 
-    public UsersController(UsersService usersService, Environment env) {
+    public UsersController(UsersService usersService, Environment env, RestTemplate restTemplate) {
         this.usersService = usersService;
         this.env = env;
+        this.restTemplate = restTemplate;
     }
 
     @GetMapping("/status/check")
@@ -43,5 +50,25 @@ public class UsersController {
         CreateUserResponseModel userResponse = mapper.map(createdUser, CreateUserResponseModel.class);
 
         return ResponseEntity.status(HttpStatus.CREATED).body(userResponse);
+    }
+
+    @GetMapping("/{userId}")
+    public ResponseEntity<UserResponseModel> getUser(@PathVariable String userId) {
+        UserDto userDto = usersService.getUserById(userId);
+
+        ModelMapper mapper = new ModelMapper();
+        mapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
+        UserResponseModel returnValue = mapper.map(userDto, UserResponseModel.class);
+
+        String albumsUrl = String.format("http://albums-ws/users/%s/albums", userId);
+
+        ResponseEntity<List<AlbumResponseModel>> albumsListResponse =
+                restTemplate.exchange(albumsUrl, HttpMethod.GET, null, new ParameterizedTypeReference<List<AlbumResponseModel>>() {});
+
+        List<AlbumResponseModel> albumsList = albumsListResponse.getBody();
+
+        returnValue.setAlbums(albumsList);
+
+        return ResponseEntity.ok(returnValue);
     }
 }

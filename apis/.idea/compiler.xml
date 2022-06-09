@@ -10,6 +10,7 @@
         <module name="labscontrol (1)" />
         <module name="LabsControlApiConfigServer" />
         <module name="ApiGateway" />
+        <module name="PhotoAppApiAlbums" />
         <module name="labscontrol" />
       </profile>
     </annotationProcessing>
@@ -19,6 +20,7 @@
       <module name="labscontrol (1)" target="17" />
       <module name="LabsControlApiAccountManagment" target="17" />
       <module name="LabsControlApiConfigServer" target="17" />
+      <module name="PhotoAppApiAlbums" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -26,6 +28,7 @@
       <module name="ApiGateway" options="-parameters" />
       <module name="LabsControlApiAccountManagment" options="-parameters" />
       <module name="LabsControlApiConfigServer" options="-parameters" />
+      <module name="PhotoAppApiAlbums" options="-parameters" />
       <module name="labscontrol" options="-parameters" />
       <module name="labscontrol (1)" options="-parameters" />
     </option>

@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/../ApiGateway/ApiGateway.iml" filepath="$PROJECT_DIR$/../ApiGateway/ApiGateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/../LabsControlApiAccountManagment/LabsControlApiAccountManagment.iml" filepath="$PROJECT_DIR$/../LabsControlApiAccountManagment/LabsControlApiAccountManagment.iml" />
       <module fileurl="file://$PROJECT_DIR$/../LabsControlApiConfigServer/LabsControlApiConfigServer.iml" filepath="$PROJECT_DIR$/../LabsControlApiConfigServer/LabsControlApiConfigServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../temp/PhotoAppApiAlbums/PhotoAppApiAlbums.iml" filepath="$PROJECT_DIR$/../../../../temp/PhotoAppApiAlbums/PhotoAppApiAlbums.iml" />
       <module fileurl="file://$PROJECT_DIR$/../LabsControlApiUsers/labscontrol.iml" filepath="$PROJECT_DIR$/../LabsControlApiUsers/labscontrol.iml" />
       <module fileurl="file://$PROJECT_DIR$/../LabsControlDiscoveryService/labscontrol (1).iml" filepath="$PROJECT_DIR$/../LabsControlDiscoveryService/labscontrol (1).iml" />
     </modules>
