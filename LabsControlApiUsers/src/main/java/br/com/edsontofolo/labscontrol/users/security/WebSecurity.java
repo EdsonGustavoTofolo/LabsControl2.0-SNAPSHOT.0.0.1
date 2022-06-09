@@ -4,6 +4,7 @@ import br.com.edsontofolo.labscontrol.users.service.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.env.Environment;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -31,7 +32,7 @@ public class WebSecurity {
         HttpSecurity httpSecurity = http.csrf().disable()
                 .headers().frameOptions().disable().and() // Para funcionar o console do H2Database
                 .authorizeRequests(authz -> authz
-                        .antMatchers(env.getProperty("api.users.actuator.url.path")).permitAll()
+                        .antMatchers(HttpMethod.GET, env.getProperty("api.users.actuator.url.path")).permitAll()
                         .antMatchers("/api/users/**").hasIpAddress(env.getProperty("gateway.ip"))
                         .and()
                         .addFilter(getAuthenticationFilter()));
