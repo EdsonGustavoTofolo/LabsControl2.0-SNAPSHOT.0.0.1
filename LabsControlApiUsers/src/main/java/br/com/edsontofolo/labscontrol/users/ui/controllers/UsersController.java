@@ -1,5 +1,6 @@
 package br.com.edsontofolo.labscontrol.users.ui.controllers;
 
+import br.com.edsontofolo.labscontrol.users.data.AlbumsServiceClient;
 import br.com.edsontofolo.labscontrol.users.service.UsersService;
 import br.com.edsontofolo.labscontrol.users.shared.UserDto;
 import br.com.edsontofolo.labscontrol.users.ui.model.AlbumResponseModel;
@@ -26,11 +27,13 @@ public class UsersController {
     private final UsersService usersService;
     private final Environment env;
     private final RestTemplate restTemplate;
+    private final AlbumsServiceClient albumsServiceClient;
 
-    public UsersController(UsersService usersService, Environment env, RestTemplate restTemplate) {
+    public UsersController(UsersService usersService, Environment env, RestTemplate restTemplate, AlbumsServiceClient albumsServiceClient) {
         this.usersService = usersService;
         this.env = env;
         this.restTemplate = restTemplate;
+        this.albumsServiceClient = albumsServiceClient;
     }
 
     @GetMapping("/status/check")
@@ -66,6 +69,21 @@ public class UsersController {
                 restTemplate.exchange(albumsUrl, HttpMethod.GET, null, new ParameterizedTypeReference<List<AlbumResponseModel>>() {});
 
         List<AlbumResponseModel> albumsList = albumsListResponse.getBody();
+
+        returnValue.setAlbums(albumsList);
+
+        return ResponseEntity.ok(returnValue);
+    }
+
+    @GetMapping("/feign-client/{userId}")
+    public ResponseEntity<UserResponseModel> getUserByFeignClient(@PathVariable String userId) {
+        UserDto userDto = usersService.getUserById(userId);
+
+        ModelMapper mapper = new ModelMapper();
+        mapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
+        UserResponseModel returnValue = mapper.map(userDto, UserResponseModel.class);
+
+        List<AlbumResponseModel> albumsList = albumsServiceClient.getAlbums(userId);
 
         returnValue.setAlbums(albumsList);
 
