@@ -1,6 +1,5 @@
 package br.com.edsontofolo.labscontrol;
 
-import br.com.edsontofolo.labscontrol.users.shared.FeignErrorDecoder;
 import feign.Logger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
