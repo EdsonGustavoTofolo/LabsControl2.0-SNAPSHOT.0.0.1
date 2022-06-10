@@ -10,6 +10,8 @@ import br.com.edsontofolo.labscontrol.users.ui.model.UserResponseModel;
 import feign.FeignException;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.core.env.Environment;
 import org.springframework.http.HttpMethod;
@@ -24,6 +26,8 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/users")
 public class UsersController {
+
+    private final Logger logger = LoggerFactory.getLogger(UsersController.class);
 
     private final UsersService usersService;
     private final Environment env;
@@ -84,7 +88,10 @@ public class UsersController {
         mapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
         UserResponseModel returnValue = mapper.map(userDto, UserResponseModel.class);
 
+        logger.info("Before calling albums Microservice");
         List<AlbumResponseModel> albumsList = albumsServiceClient.getAlbums(userId);
+        logger.info("After calling albums Microservice");
+
         returnValue.setAlbums(albumsList);
 
         return ResponseEntity.ok(returnValue);
