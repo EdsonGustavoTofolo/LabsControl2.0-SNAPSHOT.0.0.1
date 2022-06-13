@@ -1216,3 +1216,564 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
 
 2022-06-13 09:21:36.114  INFO [users-ws,,] 8924 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-06-13 09:40:25.013  INFO [users-ws,,] 2460 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2022-06-13 09:40:25.020  INFO [users-ws,,] 2460 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2022-06-13 09:40:25.021  WARN [users-ws,,] 2460 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/users-ws/default": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information
+2022-06-13 09:40:25.023  INFO [users-ws,,] 2460 --- [restartedMain] b.c.e.l.LabsControlApiUsersApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-06-13 09:40:25.041  INFO [users-ws,,] 2460 --- [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8012
+2022-06-13 09:40:25.041  INFO [users-ws,,] 2460 --- [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=users-ws, profiles=[default], label=null, version=c36037df871db6af8c4ebd77f88f1558fd365178, state=null
+2022-06-13 09:40:26.718  INFO [users-ws,,] 2460 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-13 09:40:26.804  INFO [users-ws,,] 2460 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75 ms. Found 1 JPA repository interfaces.
+2022-06-13 09:40:27.376  INFO [users-ws,,] 2460 --- [restartedMain] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2022-06-13 09:40:27.386  INFO [users-ws,,] 2460 --- [restartedMain] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2022-06-13 09:40:27.519  INFO [users-ws,,] 2460 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=564891da-38f7-3468-866f-30b48ac4bf11
+2022-06-13 09:40:27.987  INFO [users-ws,,] 2460 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-13 09:40:28.015  INFO [users-ws,,] 2460 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration' of type [org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-13 09:40:28.030  INFO [users-ws,,] 2460 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.stream.config.BindersHealthIndicatorAutoConfiguration' of type [org.springframework.cloud.stream.config.BindersHealthIndicatorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-13 09:40:28.037  INFO [users-ws,,] 2460 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'bindersHealthContributor' of type [org.springframework.cloud.stream.config.BindersHealthIndicatorAutoConfiguration$BindersHealthContributor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-13 09:40:28.057  INFO [users-ws,,] 2460 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'bindersHealthIndicatorListener' of type [org.springframework.cloud.stream.config.BindersHealthIndicatorAutoConfiguration$BindersHealthIndicatorListener] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-13 09:40:28.075  INFO [users-ws,,] 2460 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.stream.binder.rabbit.config.ExtendedBindingHandlerMappingsProviderConfiguration' of type [org.springframework.cloud.stream.binder.rabbit.config.ExtendedBindingHandlerMappingsProviderConfiguration$$EnhancerBySpringCGLIB$$b04e95f6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-13 09:40:28.092  INFO [users-ws,,] 2460 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'rabbitExtendedPropertiesDefaultMappingsProvider' of type [org.springframework.cloud.stream.binder.rabbit.config.ExtendedBindingHandlerMappingsProviderConfiguration$$Lambda$739/0x00000008010fb420] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-13 09:40:28.101  INFO [users-ws,,] 2460 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'BindingHandlerAdvise' of type [org.springframework.cloud.stream.config.BindingHandlerAdvise] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-13 09:40:28.106  INFO [users-ws,,] 2460 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-13 09:40:28.112  INFO [users-ws,,] 2460 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-13 09:40:28.117  INFO [users-ws,,] 2460 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$740/0x00000008010fb638] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-13 09:40:28.126  INFO [users-ws,,] 2460 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-13 09:40:28.141  INFO [users-ws,,] 2460 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spelConverter' of type [org.springframework.cloud.stream.config.SpelExpressionConverterConfiguration$SpelConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-13 09:40:28.161  INFO [users-ws,,] 2460 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.jmx-org.springframework.boot.autoconfigure.jmx.JmxProperties' of type [org.springframework.boot.autoconfigure.jmx.JmxProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-13 09:40:28.173  INFO [users-ws,,] 2460 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration' of type [org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-13 09:40:28.181  INFO [users-ws,,] 2460 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'mbeanServer' of type [com.sun.jmx.mbeanserver.JmxMBeanServer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-13 09:40:28.266  INFO [users-ws,,] 2460 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-13 09:40:29.094  INFO [users-ws,,] 2460 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-06-13 09:40:29.103  INFO [users-ws,,] 2460 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-13 09:40:29.103  INFO [users-ws,,] 2460 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-13 09:40:29.282  INFO [users-ws,,] 2460 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-13 09:40:29.283  INFO [users-ws,,] 2460 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4241 ms
+2022-06-13 09:40:29.678  INFO [users-ws,,] 2460 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-13 09:40:29.790  INFO [users-ws,,] 2460 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-13 09:40:29.802  INFO [users-ws,,] 2460 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2022-06-13 09:40:30.518  WARN [users-ws,,] 2460 --- [pool-1-thread-1] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://localhost:9411/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information}]
+2022-06-13 09:40:35.075  INFO [users-ws,,] 2460 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-13 09:40:35.164  INFO [users-ws,,] 2460 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-13 09:40:35.362  INFO [users-ws,,] 2460 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-13 09:40:35.493  INFO [users-ws,,] 2460 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-06-13 09:40:36.367  INFO [users-ws,,] 2460 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-13 09:40:36.377  INFO [users-ws,,] 2460 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-13 09:40:37.593  WARN [users-ws,,] 2460 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-13 09:40:37.867  INFO [users-ws,,] 2460 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-13 09:40:37.944  INFO [users-ws,,] 2460 --- [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'albums-ws' URL not provided. Will try picking an instance via load-balancing.
+2022-06-13 09:40:38.385  INFO [users-ws,,] 2460 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6cb659bf, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@37df1c4d, org.springframework.security.web.context.SecurityContextPersistenceFilter@4033db62, org.springframework.security.web.header.HeaderWriterFilter@6db1bca7, org.springframework.security.web.authentication.logout.LogoutFilter@d671431, br.com.edsontofolo.labscontrol.users.security.AuthenticationFilter@afd9b0c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@607f2b72, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@c36b220, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@246f9500, org.springframework.security.web.session.SessionManagementFilter@64a3b84a, org.springframework.security.web.access.ExceptionTranslationFilter@77b23a2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@652096be]
+2022-06-13 09:40:39.616  INFO [users-ws,,] 2460 --- [restartedMain] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.springCloudBusInput' has 1 subscriber(s).
+2022-06-13 09:40:40.231  INFO [users-ws,,] 2460 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-06-13 09:40:40.878  WARN [users-ws,,] 2460 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-06-13 09:40:41.126  INFO [users-ws,,] 2460 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 34 endpoint(s) beneath base path '/actuator'
+2022-06-13 09:40:41.869  INFO [users-ws,,] 2460 --- [restartedMain] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel errorChannel
+2022-06-13 09:40:41.929  INFO [users-ws,,] 2460 --- [restartedMain] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel springCloudBusInput
+2022-06-13 09:40:41.965  INFO [users-ws,,] 2460 --- [restartedMain] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel nullChannel
+2022-06-13 09:40:41.999  INFO [users-ws,,] 2460 --- [restartedMain] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageHandler _org.springframework.integration.errorLogger
+2022-06-13 09:40:42.084  INFO [users-ws,,] 2460 --- [restartedMain] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2022-06-13 09:40:42.085  INFO [users-ws,,] 2460 --- [restartedMain] o.s.i.channel.PublishSubscribeChannel    : Channel 'application-1.errorChannel' has 1 subscriber(s).
+2022-06-13 09:40:42.085  INFO [users-ws,,] 2460 --- [restartedMain] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
+2022-06-13 09:40:42.110  INFO [users-ws,,] 2460 --- [restartedMain] o.s.c.s.binder.DefaultBinderFactory      : Creating binder: rabbit
+2022-06-13 09:40:42.227  INFO [users-ws,,] 2460 --- [restartedMain] o.s.c.s.binder.DefaultBinderFactory      : Caching the binder: rabbit
+2022-06-13 09:40:42.228  INFO [users-ws,,] 2460 --- [restartedMain] o.s.c.s.binder.DefaultBinderFactory      : Retrieving cached binder: rabbit
+2022-06-13 09:40:42.381  INFO [users-ws,,] 2460 --- [restartedMain] c.s.b.r.p.RabbitExchangeQueueProvisioner : declaring queue for inbound: springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw, bound to: springCloudBus
+2022-06-13 09:40:42.384  INFO [users-ws,,] 2460 --- [restartedMain] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:40:42.416  INFO [users-ws,,] 2460 --- [restartedMain] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:40:42.423  INFO [users-ws,,] 2460 --- [restartedMain] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:40:42.459  INFO [users-ws,,] 2460 --- [restartedMain] o.s.c.stream.binder.BinderErrorChannel   : Channel 'springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw.errors' has 1 subscriber(s).
+2022-06-13 09:40:42.460  INFO [users-ws,,] 2460 --- [restartedMain] o.s.c.stream.binder.BinderErrorChannel   : Channel 'springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw.errors' has 2 subscriber(s).
+2022-06-13 09:40:42.464  INFO [users-ws,,] 2460 --- [restartedMain] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:40:42.466  INFO [users-ws,,] 2460 --- [restartedMain] o.s.a.r.l.SimpleMessageListenerContainer : Broker not available; cannot force queue declarations during start: java.net.ConnectException: Connection refused: no further information
+2022-06-13 09:40:42.478  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-1] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:40:42.488  INFO [users-ws,,] 2460 --- [restartedMain] o.s.i.a.i.AmqpInboundChannelAdapter      : started bean 'inbound.springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw'
+2022-06-13 09:40:42.563  INFO [users-ws,,] 2460 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 60282 (http) with context path ''
+2022-06-13 09:40:42.566  INFO [users-ws,,] 2460 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 60282
+2022-06-13 09:40:42.590  INFO [users-ws,,] 2460 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-06-13 09:40:42.752  INFO [users-ws,,] 2460 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-06-13 09:40:42.762  INFO [users-ws,,] 2460 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-13 09:40:42.818  INFO [users-ws,,] 2460 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-06-13 09:40:42.818  INFO [users-ws,,] 2460 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-06-13 09:40:42.818  INFO [users-ws,,] 2460 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-06-13 09:40:42.819  INFO [users-ws,,] 2460 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-06-13 09:40:42.824  INFO [users-ws,,] 2460 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-06-13 09:40:42.824  INFO [users-ws,,] 2460 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-06-13 09:40:42.824  INFO [users-ws,,] 2460 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-06-13 09:40:43.210  INFO [users-ws,,] 2460 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-06-13 09:40:43.227  INFO [users-ws,,] 2460 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-06-13 09:40:43.235  INFO [users-ws,,] 2460 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-06-13 09:40:43.320  INFO [users-ws,,] 2460 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1655124043318 with initial instances count: 1
+2022-06-13 09:40:43.368  INFO [users-ws,,] 2460 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application USERS-WS with eureka with status UP
+2022-06-13 09:40:43.369  INFO [users-ws,,] 2460 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1655124043369, current=UP, previous=STARTING]
+2022-06-13 09:40:43.375  INFO [users-ws,,] 2460 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERS-WS/users-ws:8edb3cb58191081902aaf53ed65221f7: registering service...
+2022-06-13 09:40:43.565  INFO [users-ws,,] 2460 --- [restartedMain] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw.errors
+2022-06-13 09:40:43.581  INFO [users-ws,,] 2460 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERS-WS/users-ws:8edb3cb58191081902aaf53ed65221f7 - registration status: 204
+2022-06-13 09:40:43.654  INFO [users-ws,,] 2460 --- [restartedMain] b.c.e.l.LabsControlApiUsersApplication   : Started LabsControlApiUsersApplication in 21.247 seconds (JVM running for 22.778)
+2022-06-13 09:40:44.118  INFO [users-ws,,] 2460 --- [RMI TCP Connection(8)-192.168.3.25] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-13 09:40:44.118  INFO [users-ws,,] 2460 --- [RMI TCP Connection(8)-192.168.3.25] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-13 09:40:44.124  INFO [users-ws,,] 2460 --- [RMI TCP Connection(8)-192.168.3.25] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2022-06-13 09:40:44.138  INFO [users-ws,,] 2460 --- [RMI TCP Connection(9)-192.168.3.25] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:40:44.166  WARN [users-ws,,] 2460 --- [RMI TCP Connection(9)-192.168.3.25] o.s.b.a.amqp.RabbitHealthIndicator       : Rabbit health check failed
+
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:61) ~[spring-rabbit-2.4.5.jar:2.4.5]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:602) ~[spring-rabbit-2.4.5.jar:2.4.5]
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:725) ~[spring-rabbit-2.4.5.jar:2.4.5]
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:252) ~[spring-rabbit-2.4.5.jar:2.4.5]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2173) ~[spring-rabbit-2.4.5.jar:2.4.5]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2146) ~[spring-rabbit-2.4.5.jar:2.4.5]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2126) ~[spring-rabbit-2.4.5.jar:2.4.5]
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.getVersion(RabbitHealthIndicator.java:49) ~[spring-boot-actuator-2.7.0.jar:2.7.0]
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.doHealthCheck(RabbitHealthIndicator.java:44) ~[spring-boot-actuator-2.7.0.jar:2.7.0]
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82) ~[spring-boot-actuator-2.7.0.jar:2.7.0]
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37) ~[spring-boot-actuator-2.7.0.jar:2.7.0]
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:77) ~[spring-boot-actuator-2.7.0.jar:2.7.0]
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:40) ~[spring-boot-actuator-2.7.0.jar:2.7.0]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:130) ~[spring-boot-actuator-2.7.0.jar:2.7.0]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:141) ~[spring-boot-actuator-2.7.0.jar:2.7.0]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:126) ~[spring-boot-actuator-2.7.0.jar:2.7.0]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:95) ~[spring-boot-actuator-2.7.0.jar:2.7.0]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:66) ~[spring-boot-actuator-2.7.0.jar:2.7.0]
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:71) ~[spring-boot-actuator-2.7.0.jar:2.7.0]
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:61) ~[spring-boot-actuator-2.7.0.jar:2.7.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282) ~[spring-core-5.3.20.jar:5.3.20]
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74) ~[spring-boot-actuator-2.7.0.jar:2.7.0]
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60) ~[spring-boot-actuator-2.7.0.jar:2.7.0]
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:122) ~[spring-boot-actuator-2.7.0.jar:2.7.0]
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:97) ~[spring-boot-actuator-2.7.0.jar:2.7.0]
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:814) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1472) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197) ~[na:na]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705) ~[na:na]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:633) ~[na:na]
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:60) ~[amqp-client-5.14.2.jar:5.14.2]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1223) ~[amqp-client-5.14.2.jar:5.14.2]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1173) ~[amqp-client-5.14.2.jar:5.14.2]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:640) ~[spring-rabbit-2.4.5.jar:2.4.5]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:615) ~[spring-rabbit-2.4.5.jar:2.4.5]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:565) ~[spring-rabbit-2.4.5.jar:2.4.5]
+	... 50 common frames omitted
+
+2022-06-13 09:40:44.168  INFO [users-ws,,] 2460 --- [RMI TCP Connection(9)-192.168.3.25] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:40:44.173  WARN [users-ws,,] 2460 --- [RMI TCP Connection(9)-192.168.3.25] o.s.b.a.amqp.RabbitHealthIndicator       : Rabbit health check failed
+
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:61) ~[spring-rabbit-2.4.5.jar:2.4.5]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:602) ~[spring-rabbit-2.4.5.jar:2.4.5]
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:725) ~[spring-rabbit-2.4.5.jar:2.4.5]
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:252) ~[spring-rabbit-2.4.5.jar:2.4.5]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2173) ~[spring-rabbit-2.4.5.jar:2.4.5]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2146) ~[spring-rabbit-2.4.5.jar:2.4.5]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2126) ~[spring-rabbit-2.4.5.jar:2.4.5]
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.getVersion(RabbitHealthIndicator.java:49) ~[spring-boot-actuator-2.7.0.jar:2.7.0]
+	at org.springframework.boot.actuate.amqp.RabbitHealthIndicator.doHealthCheck(RabbitHealthIndicator.java:44) ~[spring-boot-actuator-2.7.0.jar:2.7.0]
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82) ~[spring-boot-actuator-2.7.0.jar:2.7.0]
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37) ~[spring-boot-actuator-2.7.0.jar:2.7.0]
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:77) ~[spring-boot-actuator-2.7.0.jar:2.7.0]
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:40) ~[spring-boot-actuator-2.7.0.jar:2.7.0]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:130) ~[spring-boot-actuator-2.7.0.jar:2.7.0]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:141) ~[spring-boot-actuator-2.7.0.jar:2.7.0]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:126) ~[spring-boot-actuator-2.7.0.jar:2.7.0]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateContribution(HealthEndpointSupport.java:141) ~[spring-boot-actuator-2.7.0.jar:2.7.0]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:126) ~[spring-boot-actuator-2.7.0.jar:2.7.0]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:95) ~[spring-boot-actuator-2.7.0.jar:2.7.0]
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:66) ~[spring-boot-actuator-2.7.0.jar:2.7.0]
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:71) ~[spring-boot-actuator-2.7.0.jar:2.7.0]
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:61) ~[spring-boot-actuator-2.7.0.jar:2.7.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282) ~[spring-core-5.3.20.jar:5.3.20]
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:74) ~[spring-boot-actuator-2.7.0.jar:2.7.0]
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60) ~[spring-boot-actuator-2.7.0.jar:2.7.0]
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:122) ~[spring-boot-actuator-2.7.0.jar:2.7.0]
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:97) ~[spring-boot-actuator-2.7.0.jar:2.7.0]
+	at java.management/com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:814) ~[na:na]
+	at java.management/com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:802) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1472) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1310) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1405) ~[na:na]
+	at java.management.rmi/javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at java.rmi/sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:360) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:200) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport$1.run(Transport.java:197) ~[na:na]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:712) ~[na:na]
+	at java.rmi/sun.rmi.transport.Transport.serviceCall(Transport.java:196) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:587) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:828) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:705) ~[na:na]
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399) ~[na:na]
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:704) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:633) ~[na:na]
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:60) ~[amqp-client-5.14.2.jar:5.14.2]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1223) ~[amqp-client-5.14.2.jar:5.14.2]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1173) ~[amqp-client-5.14.2.jar:5.14.2]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:640) ~[spring-rabbit-2.4.5.jar:2.4.5]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:615) ~[spring-rabbit-2.4.5.jar:2.4.5]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:565) ~[spring-rabbit-2.4.5.jar:2.4.5]
+	... 52 common frames omitted
+
+2022-06-13 09:40:47.621  WARN [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-1] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2022-06-13 09:40:47.628  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-1] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@6c405193: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-06-13 09:40:47.639  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-2] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:40:52.731  WARN [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-2] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2022-06-13 09:40:52.731  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-2] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@68a8dfe: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-06-13 09:40:52.732  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-3] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:40:57.899  WARN [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-3] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2022-06-13 09:40:57.900  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-3] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@6e40c602: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-06-13 09:40:57.901  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-4] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:41:02.989  WARN [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-4] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2022-06-13 09:41:02.991  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-4] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@7442d93c: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-06-13 09:41:02.993  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-5] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:41:08.083  WARN [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-5] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2022-06-13 09:41:08.085  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-5] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@16d773f2: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-06-13 09:41:08.088  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-6] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:41:13.213  WARN [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-6] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2022-06-13 09:41:13.214  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-6] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@18a9948: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-06-13 09:41:13.216  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-7] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:41:18.301  WARN [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-7] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2022-06-13 09:41:18.302  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-7] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@1a7634f5: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-06-13 09:41:18.303  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-8] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:41:23.406  WARN [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-8] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2022-06-13 09:41:23.406  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-8] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@4d8c653c: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-06-13 09:41:23.407  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-9] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:41:28.490  WARN [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-9] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2022-06-13 09:41:28.492  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-9] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@564ec7c4: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-06-13 09:41:28.495  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-10] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:41:33.603  WARN [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-10] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2022-06-13 09:41:33.606  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-10] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@7263f396: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-06-13 09:41:33.609  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-11] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:41:38.683  WARN [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-11] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2022-06-13 09:41:38.685  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-11] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@1115d20a: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-06-13 09:41:38.686  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-12] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:41:43.765  WARN [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-12] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2022-06-13 09:41:43.766  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-12] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@705126d4: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-06-13 09:41:43.769  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-13] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:41:48.859  WARN [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-13] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2022-06-13 09:41:48.862  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-13] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@3093e03c: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-06-13 09:41:48.865  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-14] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:41:53.970  WARN [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-14] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2022-06-13 09:41:53.971  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-14] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@7a0b4ab4: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-06-13 09:41:53.972  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-15] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:41:59.046  WARN [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-15] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2022-06-13 09:41:59.047  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-15] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@383df43e: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-06-13 09:41:59.050  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-16] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:42:04.117  WARN [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-16] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2022-06-13 09:42:04.119  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-16] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@125b6eac: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-06-13 09:42:04.121  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-17] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:42:09.222  WARN [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-17] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2022-06-13 09:42:09.224  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-17] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@2ffc3a61: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-06-13 09:42:09.227  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-18] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:42:14.315  WARN [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-18] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2022-06-13 09:42:14.317  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-18] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@11eb6230: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-06-13 09:42:14.319  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-19] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:42:19.401  WARN [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-19] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2022-06-13 09:42:19.403  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-19] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@66a30168: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-06-13 09:42:19.406  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-20] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:42:24.539  WARN [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-20] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2022-06-13 09:42:24.540  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-20] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@6dc27c3c: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-06-13 09:42:24.541  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-21] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:42:29.640  WARN [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-21] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2022-06-13 09:42:29.640  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-21] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@35634efe: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-06-13 09:42:29.642  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-22] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:42:34.729  WARN [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-22] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2022-06-13 09:42:34.731  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-22] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@78c073e7: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-06-13 09:42:34.734  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-23] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:42:39.836  WARN [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-23] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2022-06-13 09:42:39.837  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-23] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@77b229db: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-06-13 09:42:39.839  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-24] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:42:44.903  WARN [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-24] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2022-06-13 09:42:44.904  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-24] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@54244694: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-06-13 09:42:44.906  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-25] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:42:50.018  WARN [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-25] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2022-06-13 09:42:50.019  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-25] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@ab4c777: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-06-13 09:42:50.020  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-26] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:42:55.084  WARN [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-26] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2022-06-13 09:42:55.085  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-26] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@6613b3e1: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-06-13 09:42:55.088  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-27] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:43:00.183  WARN [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-27] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2022-06-13 09:43:00.184  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-27] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@69400afd: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-06-13 09:43:00.186  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-28] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:43:05.295  WARN [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-28] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2022-06-13 09:43:05.298  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-28] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@67f6035b: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-06-13 09:43:05.303  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-29] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:43:10.416  WARN [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-29] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2022-06-13 09:43:10.418  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-29] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@2ffc9fef: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-06-13 09:43:10.421  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-30] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:43:15.497  WARN [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-30] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2022-06-13 09:43:15.499  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-30] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@66ec4eab: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-06-13 09:43:15.501  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-31] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:43:20.622  WARN [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-31] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2022-06-13 09:43:20.623  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-31] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@6131a08e: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-06-13 09:43:20.626  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-32] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:43:25.697  WARN [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-32] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2022-06-13 09:43:25.698  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-32] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@473bfc13: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-06-13 09:43:25.699  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-33] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:43:30.788  WARN [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-33] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2022-06-13 09:43:30.790  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-33] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@6218a460: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-06-13 09:43:30.793  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-34] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:43:35.872  WARN [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-34] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2022-06-13 09:43:35.872  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-34] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@438b7433: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-06-13 09:43:35.873  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-35] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:43:40.966  WARN [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-35] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2022-06-13 09:43:40.968  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-35] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@af7513: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-06-13 09:43:40.971  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-36] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:43:46.045  WARN [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-36] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2022-06-13 09:43:46.046  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-36] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@1ab4d696: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-06-13 09:43:46.048  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-37] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:43:51.138  WARN [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-37] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2022-06-13 09:43:51.140  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-37] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@11e126fc: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-06-13 09:43:51.143  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-38] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:43:56.224  WARN [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-38] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: no further information
+2022-06-13 09:43:56.226  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-38] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@28d9461e: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2022-06-13 09:43:56.229  INFO [users-ws,,] 2460 --- [springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw-39] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2022-06-13 09:43:59.524  INFO [users-ws,,] 2460 --- [Thread-7] o.s.c.s.a.z.ZipkinAutoConfiguration      : Flushing remaining spans on shutdown
+2022-06-13 09:43:59.525  INFO [users-ws,,] 2460 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application USERS-WS with eureka with status DOWN
+2022-06-13 09:43:59.526  INFO [users-ws,,] 2460 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1655124239526, current=DOWN, previous=UP]
+2022-06-13 09:43:59.526  INFO [users-ws,,] 2460 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERS-WS/users-ws:8edb3cb58191081902aaf53ed65221f7: registering service...
+2022-06-13 09:43:59.536  INFO [users-ws,,] 2460 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERS-WS/users-ws:8edb3cb58191081902aaf53ed65221f7 - registration status: 204
+2022-06-13 09:43:59.560  INFO [users-ws,,] 2460 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2022-06-13 09:43:59.561  INFO [users-ws,,] 2460 --- [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2022-06-13 09:43:59.561  INFO [users-ws,,] 2460 --- [SpringApplicationShutdownHook] o.s.i.a.i.AmqpInboundChannelAdapter      : stopped bean 'inbound.springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw'
+2022-06-13 09:43:59.571  INFO [users-ws,,] 2460 --- [SpringApplicationShutdownHook] o.s.c.stream.binder.BinderErrorChannel   : Channel 'application-1.springCloudBus.anonymous.uYTFXMf0QBaEjclXh-0exw.errors' has 1 subscriber(s).
+2022-06-13 09:43:59.575  INFO [users-ws,,] 2460 --- [SpringApplicationShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2022-06-13 09:43:59.575  INFO [users-ws,,] 2460 --- [SpringApplicationShutdownHook] o.s.i.channel.PublishSubscribeChannel    : Channel 'application-1.errorChannel' has 0 subscriber(s).
+2022-06-13 09:43:59.576  INFO [users-ws,,] 2460 --- [SpringApplicationShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : stopped bean '_org.springframework.integration.errorLogger'
+2022-06-13 09:43:59.617  INFO [users-ws,,] 2460 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-13 09:43:59.624  INFO [users-ws,,] 2460 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-06-13 09:43:59.649  WARN [users-ws,,] 2460 --- [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-193]
+2022-06-13 09:44:00.742  INFO [users-ws,,] 2460 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-13 09:44:00.745  INFO [users-ws,,] 2460 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-13 09:44:00.747  INFO [users-ws,,] 2460 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-06-13 09:44:03.788  INFO [users-ws,,] 2460 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-06-13 09:44:03.808  INFO [users-ws,,] 2460 --- [SpringApplicationShutdownHook] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://admin:admin@localhost:8010/eureka/} exception=I/O error on DELETE request for "http://admin:admin@localhost:8010/eureka/apps/USERS-WS/users-ws:8edb3cb58191081902aaf53ed65221f7": Connect to localhost:8010 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8010 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://admin:admin@localhost:8010/eureka/apps/USERS-WS/users-ws:8edb3cb58191081902aaf53ed65221f7": Connect to localhost:8010 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8010 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:602)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:972)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:948)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:197)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:190)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:390)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:213)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1161)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1106)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1075)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:174)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1021)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to localhost:8010 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:87)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:109)
+	at org.springframework.http.client.support.BasicAuthenticationInterceptor.intercept(BasicAuthenticationInterceptor.java:79)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:93)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:77)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776)
+	... 39 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 58 more
+
+2022-06-13 09:44:03.808  WARN [users-ws,,] 2460 --- [SpringApplicationShutdownHook] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on DELETE request for "http://admin:admin@localhost:8010/eureka/apps/USERS-WS/users-ws:8edb3cb58191081902aaf53ed65221f7": Connect to localhost:8010 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8010 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+2022-06-13 09:44:03.822  INFO [users-ws,,] 2460 --- [SpringApplicationShutdownHook] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://admin:admin@localhost:8010/eureka/}, exception=I/O error on DELETE request for "http://admin:admin@localhost:8010/eureka/apps/USERS-WS/users-ws:8edb3cb58191081902aaf53ed65221f7": Connect to localhost:8010 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8010 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://admin:admin@localhost:8010/eureka/apps/USERS-WS/users-ws:8edb3cb58191081902aaf53ed65221f7": Connect to localhost:8010 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8010 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:602)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:972)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:948)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:197)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:190)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:390)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:213)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1161)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1106)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1075)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:174)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1021)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to localhost:8010 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:87)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:109)
+	at org.springframework.http.client.support.BasicAuthenticationInterceptor.intercept(BasicAuthenticationInterceptor.java:79)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:93)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:77)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776)
+	... 40 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 59 more
+
+2022-06-13 09:44:03.823  WARN [users-ws,,] 2460 --- [SpringApplicationShutdownHook] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on DELETE request for "http://admin:admin@localhost:8010/eureka/apps/USERS-WS/users-ws:8edb3cb58191081902aaf53ed65221f7": Connect to localhost:8010 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8010 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+2022-06-13 09:44:03.829 ERROR [users-ws,,] 2460 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERS-WS/users-ws:8edb3cb58191081902aaf53ed65221f7 - de-registration failedCannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:972) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:948) ~[eureka-client-1.10.17.jar:1.10.17]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:197) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:190) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:390) ~[spring-cloud-context-3.1.3.jar:3.1.3]
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136) ~[spring-cloud-context-3.1.3.jar:3.1.3]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:213) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1161) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1154) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1106) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1075) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:174) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1021) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145) ~[spring-boot-2.7.0.jar:2.7.0]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114) ~[spring-boot-2.7.0.jar:2.7.0]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2022-06-13 09:44:03.897  INFO [users-ws,,] 2460 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
