@@ -33,7 +33,7 @@ public class WebSecurity {
                 .headers().frameOptions().disable().and() // Para funcionar o console do H2Database
                 .authorizeRequests(authz -> authz
                         .antMatchers(HttpMethod.GET, env.getProperty("api.users.actuator.url.path")).permitAll()
-                        .antMatchers("/api/users/**").hasIpAddress(env.getProperty("gateway.ip"))
+                        .antMatchers(HttpMethod.POST, "/api/users").permitAll()
                         .and()
                         .addFilter(getAuthenticationFilter()));
         return httpSecurity.build();
