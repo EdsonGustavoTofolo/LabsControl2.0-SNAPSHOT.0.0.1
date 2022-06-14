@@ -1596,3 +1596,933 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 2022-06-14 09:30:34.223  INFO 5192 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
 2022-06-14 09:30:34.223  INFO 5192 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
 2022-06-14 09:30:34.263  INFO 5192 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-06-14 09:34:50.739  INFO 5192 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application USERS-WS with eureka with status DOWN
+2022-06-14 09:34:50.740  INFO 5192 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1655210090740, current=DOWN, previous=UP]
+2022-06-14 09:34:50.741  INFO 5192 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERS-WS/users-ws:c40665cc77e740e3c8e7d33cc8e1216b: registering service...
+2022-06-14 09:34:50.751  INFO 5192 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERS-WS/users-ws:c40665cc77e740e3c8e7d33cc8e1216b - registration status: 204
+2022-06-14 09:34:50.807  INFO 5192 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-14 09:34:50.809  INFO 5192 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-06-14 09:34:50.823  WARN 5192 --- [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-193]
+2022-06-14 09:34:50.827  INFO 5192 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-14 09:34:50.831  INFO 5192 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-14 09:34:50.837  INFO 5192 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-06-14 09:34:53.962  INFO 5192 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-06-14 09:34:54.185  INFO 5192 --- [SpringApplicationShutdownHook] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://admin:admin@localhost:8010/eureka/} exception=I/O error on DELETE request for "http://admin:admin@localhost:8010/eureka/apps/USERS-WS/users-ws:c40665cc77e740e3c8e7d33cc8e1216b": Connect to localhost:8010 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8010 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://admin:admin@localhost:8010/eureka/apps/USERS-WS/users-ws:c40665cc77e740e3c8e7d33cc8e1216b": Connect to localhost:8010 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8010 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:602)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:972)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:948)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:197)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:190)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:390)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:213)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1161)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1106)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1075)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:174)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1021)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to localhost:8010 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:87)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:109)
+	at org.springframework.http.client.support.BasicAuthenticationInterceptor.intercept(BasicAuthenticationInterceptor.java:79)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:93)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:77)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776)
+	... 39 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 58 more
+
+2022-06-14 09:34:54.186  WARN 5192 --- [SpringApplicationShutdownHook] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on DELETE request for "http://admin:admin@localhost:8010/eureka/apps/USERS-WS/users-ws:c40665cc77e740e3c8e7d33cc8e1216b": Connect to localhost:8010 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8010 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+2022-06-14 09:34:54.463  INFO 5192 --- [SpringApplicationShutdownHook] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://admin:admin@localhost:8010/eureka/}, exception=I/O error on DELETE request for "http://admin:admin@localhost:8010/eureka/apps/USERS-WS/users-ws:c40665cc77e740e3c8e7d33cc8e1216b": Connect to localhost:8010 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8010 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://admin:admin@localhost:8010/eureka/apps/USERS-WS/users-ws:c40665cc77e740e3c8e7d33cc8e1216b": Connect to localhost:8010 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8010 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:602)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:972)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:948)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:197)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:190)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:390)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:213)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1161)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1106)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1075)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:174)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1021)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to localhost:8010 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:87)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:109)
+	at org.springframework.http.client.support.BasicAuthenticationInterceptor.intercept(BasicAuthenticationInterceptor.java:79)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:93)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:77)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:776)
+	... 40 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 59 more
+
+2022-06-14 09:34:54.662  WARN 5192 --- [SpringApplicationShutdownHook] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on DELETE request for "http://admin:admin@localhost:8010/eureka/apps/USERS-WS/users-ws:c40665cc77e740e3c8e7d33cc8e1216b": Connect to localhost:8010 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8010 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+2022-06-14 09:34:54.674 ERROR 5192 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERS-WS/users-ws:c40665cc77e740e3c8e7d33cc8e1216b - de-registration failedCannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:972) ~[eureka-client-1.10.17.jar:1.10.17]
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:948) ~[eureka-client-1.10.17.jar:1.10.17]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:389) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:347) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:177) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:197) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:190) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:390) ~[spring-cloud-context-3.1.3.jar:3.1.3]
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136) ~[spring-cloud-context-3.1.3.jar:3.1.3]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:213) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1161) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1154) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1106) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1075) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:174) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1021) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145) ~[spring-boot-2.7.0.jar:2.7.0]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114) ~[spring-boot-2.7.0.jar:2.7.0]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2022-06-14 09:34:55.149  INFO 5192 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-06-14 09:42:17.644  INFO 5092 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2022-06-14 09:42:17.659  INFO 5092 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2022-06-14 09:42:17.660  WARN 5092 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/users-ws/default": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information
+2022-06-14 09:42:17.664  INFO 5092 --- [restartedMain] b.c.e.l.LabsControlApiUsersApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-06-14 09:42:17.694  INFO 5092 --- [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8012
+2022-06-14 09:42:17.695  INFO 5092 --- [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=users-ws, profiles=[default], label=null, version=5d7601a58557b61f4220b1107fd730cb5bc24e3b, state=null
+2022-06-14 09:42:20.000  INFO 5092 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-14 09:42:20.116  INFO 5092 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 100 ms. Found 1 JPA repository interfaces.
+2022-06-14 09:42:20.610  INFO 5092 --- [restartedMain] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2022-06-14 09:42:20.624  INFO 5092 --- [restartedMain] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2022-06-14 09:42:20.832  INFO 5092 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=cbd4f81a-b60d-3e4f-b6ef-a64103621464
+2022-06-14 09:42:21.443  INFO 5092 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-14 09:42:21.491  INFO 5092 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration' of type [org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-14 09:42:21.518  INFO 5092 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.stream.config.BindersHealthIndicatorAutoConfiguration' of type [org.springframework.cloud.stream.config.BindersHealthIndicatorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-14 09:42:21.531  INFO 5092 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'bindersHealthContributor' of type [org.springframework.cloud.stream.config.BindersHealthIndicatorAutoConfiguration$BindersHealthContributor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-14 09:42:21.551  INFO 5092 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'bindersHealthIndicatorListener' of type [org.springframework.cloud.stream.config.BindersHealthIndicatorAutoConfiguration$BindersHealthIndicatorListener] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-14 09:42:21.567  INFO 5092 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.stream.binder.kafka.config.ExtendedBindingHandlerMappingsProviderConfiguration' of type [org.springframework.cloud.stream.binder.kafka.config.ExtendedBindingHandlerMappingsProviderConfiguration$$EnhancerBySpringCGLIB$$ca27223d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-14 09:42:21.590  INFO 5092 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'kafkaExtendedPropertiesDefaultMappingsProvider' of type [org.springframework.cloud.stream.binder.kafka.config.ExtendedBindingHandlerMappingsProviderConfiguration$$Lambda$711/0x00000008010b47f0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-14 09:42:21.601  INFO 5092 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'BindingHandlerAdvise' of type [org.springframework.cloud.stream.config.BindingHandlerAdvise] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-14 09:42:21.607  INFO 5092 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-14 09:42:21.612  INFO 5092 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-14 09:42:21.619  INFO 5092 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$712/0x00000008010b4a08] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-14 09:42:21.626  INFO 5092 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-14 09:42:21.642  INFO 5092 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spelConverter' of type [org.springframework.cloud.stream.config.SpelExpressionConverterConfiguration$SpelConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-14 09:42:21.663  INFO 5092 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'spring.jmx-org.springframework.boot.autoconfigure.jmx.JmxProperties' of type [org.springframework.boot.autoconfigure.jmx.JmxProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-14 09:42:21.680  INFO 5092 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration' of type [org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-14 09:42:21.706  INFO 5092 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'mbeanServer' of type [com.sun.jmx.mbeanserver.JmxMBeanServer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-14 09:42:21.846  INFO 5092 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-06-14 09:42:22.914  INFO 5092 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-06-14 09:42:22.928  INFO 5092 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-14 09:42:22.928  INFO 5092 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-14 09:42:23.150  INFO 5092 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-14 09:42:23.159  INFO 5092 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5462 ms
+2022-06-14 09:42:23.618  INFO 5092 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-14 09:42:23.761  INFO 5092 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-14 09:42:23.779  INFO 5092 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2022-06-14 09:42:24.235  INFO 5092 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-14 09:42:24.330  INFO 5092 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-14 09:42:24.598  INFO 5092 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-14 09:42:24.784  INFO 5092 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-06-14 09:42:25.621  INFO 5092 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-14 09:42:25.630  INFO 5092 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-14 09:42:26.723  WARN 5092 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-14 09:42:27.334  INFO 5092 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-14 09:42:27.442  INFO 5092 --- [restartedMain] o.s.c.openfeign.FeignClientFactoryBean   : For 'albums-ws' URL not provided. Will try picking an instance via load-balancing.
+2022-06-14 09:42:28.245  INFO 5092 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@583ba08, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1de764f, org.springframework.security.web.context.SecurityContextPersistenceFilter@cfc8c09, org.springframework.security.web.header.HeaderWriterFilter@73c53a90, org.springframework.security.web.authentication.logout.LogoutFilter@16c17bb6, br.com.edsontofolo.labscontrol.users.security.AuthenticationFilter@2fdba878, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@e5a99b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5caf0864, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@23c0b36f, org.springframework.security.web.session.SessionManagementFilter@386369e, org.springframework.security.web.access.ExceptionTranslationFilter@7e52469b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1eef5447]
+2022-06-14 09:42:30.867  INFO 5092 --- [restartedMain] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application-1.springCloudBusInput' has 1 subscriber(s).
+2022-06-14 09:42:31.982  INFO 5092 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-06-14 09:42:32.214  WARN 5092 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-06-14 09:42:32.316  INFO 5092 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 33 endpoint(s) beneath base path '/actuator'
+2022-06-14 09:42:32.874  INFO 5092 --- [restartedMain] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel errorChannel
+2022-06-14 09:42:32.955  INFO 5092 --- [restartedMain] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel springCloudBusInput
+2022-06-14 09:42:32.995  INFO 5092 --- [restartedMain] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel nullChannel
+2022-06-14 09:42:33.026  INFO 5092 --- [restartedMain] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageHandler _org.springframework.integration.errorLogger
+2022-06-14 09:42:33.106  INFO 5092 --- [restartedMain] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2022-06-14 09:42:33.107  INFO 5092 --- [restartedMain] o.s.i.channel.PublishSubscribeChannel    : Channel 'application-1.errorChannel' has 1 subscriber(s).
+2022-06-14 09:42:33.108  INFO 5092 --- [restartedMain] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
+2022-06-14 09:42:33.130  INFO 5092 --- [restartedMain] o.s.c.s.binder.DefaultBinderFactory      : Creating binder: kafka
+2022-06-14 09:42:33.310  INFO 5092 --- [restartedMain] o.s.c.s.binder.DefaultBinderFactory      : Caching the binder: kafka
+2022-06-14 09:42:33.311  INFO 5092 --- [restartedMain] o.s.c.s.binder.DefaultBinderFactory      : Retrieving cached binder: kafka
+2022-06-14 09:42:33.511  INFO 5092 --- [restartedMain] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [http://localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2022-06-14 09:42:33.637  INFO 5092 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.1.1
+2022-06-14 09:42:33.637  INFO 5092 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 97671528ba54a138
+2022-06-14 09:42:33.638  INFO 5092 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1655210553634
+2022-06-14 09:42:34.456  INFO 5092 --- [kafka-admin-client-thread | adminclient-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-1 unregistered
+2022-06-14 09:42:34.466  INFO 5092 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2022-06-14 09:42:34.467  INFO 5092 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2022-06-14 09:42:34.468  INFO 5092 --- [kafka-admin-client-thread | adminclient-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2022-06-14 09:42:34.488  INFO 5092 --- [restartedMain] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 100
+	auto.offset.reset = latest
+	bootstrap.servers = [http://localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-anonymous.ea691378-1166-4c98-933b-972070062f8c-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = anonymous.ea691378-1166-4c98-933b-972070062f8c
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+
+2022-06-14 09:42:34.552  INFO 5092 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.1.1
+2022-06-14 09:42:34.552  INFO 5092 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 97671528ba54a138
+2022-06-14 09:42:34.553  INFO 5092 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1655210554552
+2022-06-14 09:42:34.602  INFO 5092 --- [restartedMain] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-anonymous.ea691378-1166-4c98-933b-972070062f8c-1, groupId=anonymous.ea691378-1166-4c98-933b-972070062f8c] Cluster ID: 6NcjgLIESsO7ZMSvcsEuvA
+2022-06-14 09:42:34.603  INFO 5092 --- [restartedMain] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-anonymous.ea691378-1166-4c98-933b-972070062f8c-1, groupId=anonymous.ea691378-1166-4c98-933b-972070062f8c] Resetting generation due to: consumer pro-actively leaving the group
+2022-06-14 09:42:34.604  INFO 5092 --- [restartedMain] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-anonymous.ea691378-1166-4c98-933b-972070062f8c-1, groupId=anonymous.ea691378-1166-4c98-933b-972070062f8c] Request joining group due to: consumer pro-actively leaving the group
+2022-06-14 09:42:34.604  INFO 5092 --- [restartedMain] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2022-06-14 09:42:34.604  INFO 5092 --- [restartedMain] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2022-06-14 09:42:34.604  INFO 5092 --- [restartedMain] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2022-06-14 09:42:34.608  INFO 5092 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-anonymous.ea691378-1166-4c98-933b-972070062f8c-1 unregistered
+2022-06-14 09:42:34.662  INFO 5092 --- [restartedMain] o.s.c.stream.binder.BinderErrorChannel   : Channel 'springCloudBus.anonymous.ea691378-1166-4c98-933b-972070062f8c.errors' has 1 subscriber(s).
+2022-06-14 09:42:34.664  INFO 5092 --- [restartedMain] o.s.c.stream.binder.BinderErrorChannel   : Channel 'springCloudBus.anonymous.ea691378-1166-4c98-933b-972070062f8c.errors' has 0 subscriber(s).
+2022-06-14 09:42:34.665  INFO 5092 --- [restartedMain] o.s.c.stream.binder.BinderErrorChannel   : Channel 'springCloudBus.anonymous.ea691378-1166-4c98-933b-972070062f8c.errors' has 1 subscriber(s).
+2022-06-14 09:42:34.666  INFO 5092 --- [restartedMain] o.s.c.stream.binder.BinderErrorChannel   : Channel 'springCloudBus.anonymous.ea691378-1166-4c98-933b-972070062f8c.errors' has 2 subscriber(s).
+2022-06-14 09:42:34.730  INFO 5092 --- [restartedMain] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 100
+	auto.offset.reset = latest
+	bootstrap.servers = [http://localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-anonymous.ea691378-1166-4c98-933b-972070062f8c-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = anonymous.ea691378-1166-4c98-933b-972070062f8c
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+
+2022-06-14 09:42:34.754  INFO 5092 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.1.1
+2022-06-14 09:42:34.755  INFO 5092 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 97671528ba54a138
+2022-06-14 09:42:34.755  INFO 5092 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1655210554754
+2022-06-14 09:42:34.787  INFO 5092 --- [restartedMain] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-anonymous.ea691378-1166-4c98-933b-972070062f8c-2, groupId=anonymous.ea691378-1166-4c98-933b-972070062f8c] Subscribed to topic(s): springCloudBus
+2022-06-14 09:42:34.850  INFO 5092 --- [restartedMain] s.i.k.i.KafkaMessageDrivenChannelAdapter : started org.springframework.integration.kafka.inbound.KafkaMessageDrivenChannelAdapter@3e153130
+2022-06-14 09:42:34.987  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-anonymous.ea691378-1166-4c98-933b-972070062f8c-2, groupId=anonymous.ea691378-1166-4c98-933b-972070062f8c] Resetting the last seen epoch of partition springCloudBus-0 to 0 since the associated topicId changed from null to TXqRQ_RJS7uOvV0y6UpbVg
+2022-06-14 09:42:34.988  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-anonymous.ea691378-1166-4c98-933b-972070062f8c-2, groupId=anonymous.ea691378-1166-4c98-933b-972070062f8c] Cluster ID: 6NcjgLIESsO7ZMSvcsEuvA
+2022-06-14 09:42:34.997  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-anonymous.ea691378-1166-4c98-933b-972070062f8c-2, groupId=anonymous.ea691378-1166-4c98-933b-972070062f8c] Discovered group coordinator DESKTOP-VUJOK0E:9092 (id: 2147483647 rack: null)
+2022-06-14 09:42:35.003  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-anonymous.ea691378-1166-4c98-933b-972070062f8c-2, groupId=anonymous.ea691378-1166-4c98-933b-972070062f8c] (Re-)joining group
+2022-06-14 09:42:35.085  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-anonymous.ea691378-1166-4c98-933b-972070062f8c-2, groupId=anonymous.ea691378-1166-4c98-933b-972070062f8c] Request joining group due to: need to re-join with the given member-id
+2022-06-14 09:42:35.086  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-anonymous.ea691378-1166-4c98-933b-972070062f8c-2, groupId=anonymous.ea691378-1166-4c98-933b-972070062f8c] (Re-)joining group
+2022-06-14 09:42:35.105  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-anonymous.ea691378-1166-4c98-933b-972070062f8c-2, groupId=anonymous.ea691378-1166-4c98-933b-972070062f8c] Successfully joined group with generation Generation{generationId=1, memberId='consumer-anonymous.ea691378-1166-4c98-933b-972070062f8c-2-add15746-8303-45b4-9db9-d0eb0df222c9', protocol='range'}
+2022-06-14 09:42:35.102  INFO 5092 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 56422 (http) with context path ''
+2022-06-14 09:42:35.113  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-anonymous.ea691378-1166-4c98-933b-972070062f8c-2, groupId=anonymous.ea691378-1166-4c98-933b-972070062f8c] Finished assignment for group at generation 1: {consumer-anonymous.ea691378-1166-4c98-933b-972070062f8c-2-add15746-8303-45b4-9db9-d0eb0df222c9=Assignment(partitions=[springCloudBus-0])}
+2022-06-14 09:42:35.116  INFO 5092 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 56422
+2022-06-14 09:42:35.133  INFO 5092 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-06-14 09:42:35.154  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-anonymous.ea691378-1166-4c98-933b-972070062f8c-2, groupId=anonymous.ea691378-1166-4c98-933b-972070062f8c] Successfully synced group in generation Generation{generationId=1, memberId='consumer-anonymous.ea691378-1166-4c98-933b-972070062f8c-2-add15746-8303-45b4-9db9-d0eb0df222c9', protocol='range'}
+2022-06-14 09:42:35.155  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-anonymous.ea691378-1166-4c98-933b-972070062f8c-2, groupId=anonymous.ea691378-1166-4c98-933b-972070062f8c] Notifying assignor about the new Assignment(partitions=[springCloudBus-0])
+2022-06-14 09:42:35.160  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-anonymous.ea691378-1166-4c98-933b-972070062f8c-2, groupId=anonymous.ea691378-1166-4c98-933b-972070062f8c] Adding newly assigned partitions: springCloudBus-0
+2022-06-14 09:42:35.174  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-anonymous.ea691378-1166-4c98-933b-972070062f8c-2, groupId=anonymous.ea691378-1166-4c98-933b-972070062f8c] Found no committed offset for partition springCloudBus-0
+2022-06-14 09:42:35.185  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-anonymous.ea691378-1166-4c98-933b-972070062f8c-2, groupId=anonymous.ea691378-1166-4c98-933b-972070062f8c] Found no committed offset for partition springCloudBus-0
+2022-06-14 09:42:35.218  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-anonymous.ea691378-1166-4c98-933b-972070062f8c-2, groupId=anonymous.ea691378-1166-4c98-933b-972070062f8c] Resetting offset for partition springCloudBus-0 to position FetchPosition{offset=8, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[DESKTOP-VUJOK0E:9092 (id: 0 rack: null)], epoch=0}}.
+2022-06-14 09:42:35.242  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] o.s.c.s.b.k.KafkaMessageChannelBinder$2  : anonymous.ea691378-1166-4c98-933b-972070062f8c: partitions assigned: [springCloudBus-0]
+2022-06-14 09:42:35.375  INFO 5092 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-06-14 09:42:35.386  INFO 5092 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-14 09:42:35.494  INFO 5092 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-06-14 09:42:35.495  INFO 5092 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-06-14 09:42:35.495  INFO 5092 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-06-14 09:42:35.496  INFO 5092 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-06-14 09:42:35.496  INFO 5092 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-06-14 09:42:35.497  INFO 5092 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-06-14 09:42:35.498  INFO 5092 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-06-14 09:42:36.795  INFO 5092 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-06-14 09:42:36.806  INFO 5092 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-06-14 09:42:36.817  INFO 5092 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-06-14 09:42:36.843  INFO 5092 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1655210556841 with initial instances count: 0
+2022-06-14 09:42:36.868  INFO 5092 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application USERS-WS with eureka with status UP
+2022-06-14 09:42:36.869  INFO 5092 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1655210556869, current=UP, previous=STARTING]
+2022-06-14 09:42:36.873  INFO 5092 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERS-WS/users-ws:a1a97a6133388ac8a0398ed29fe79216: registering service...
+2022-06-14 09:42:37.088  INFO 5092 --- [restartedMain] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel springCloudBus.anonymous.ea691378-1166-4c98-933b-972070062f8c.errors
+2022-06-14 09:42:37.181  INFO 5092 --- [restartedMain] b.c.e.l.LabsControlApiUsersApplication   : Started LabsControlApiUsersApplication in 22.972 seconds (JVM running for 24.878)
+2022-06-14 09:42:37.240  INFO 5092 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERS-WS/users-ws:a1a97a6133388ac8a0398ed29fe79216 - registration status: 204
+2022-06-14 09:42:44.958  INFO 5092 --- [pool-3-thread-1] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [http://localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-anonymous.ea691378-1166-4c98-933b-972070062f8c-3
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = anonymous.ea691378-1166-4c98-933b-972070062f8c
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+
+2022-06-14 09:42:44.971  INFO 5092 --- [pool-3-thread-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.1.1
+2022-06-14 09:42:44.971  INFO 5092 --- [pool-3-thread-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 97671528ba54a138
+2022-06-14 09:42:44.971  INFO 5092 --- [pool-3-thread-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1655210564971
+2022-06-14 09:42:44.979  INFO 5092 --- [pool-3-thread-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-anonymous.ea691378-1166-4c98-933b-972070062f8c-3, groupId=anonymous.ea691378-1166-4c98-933b-972070062f8c] Cluster ID: 6NcjgLIESsO7ZMSvcsEuvA
+2022-06-14 09:42:44.990  INFO 5092 --- [pool-3-thread-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-anonymous.ea691378-1166-4c98-933b-972070062f8c-3, groupId=anonymous.ea691378-1166-4c98-933b-972070062f8c] Resetting the last seen epoch of partition springCloudBus-0 to 0 since the associated topicId changed from null to TXqRQ_RJS7uOvV0y6UpbVg
+2022-06-14 09:42:44.997  INFO 5092 --- [pool-3-thread-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-anonymous.ea691378-1166-4c98-933b-972070062f8c-3, groupId=anonymous.ea691378-1166-4c98-933b-972070062f8c] Discovered group coordinator DESKTOP-VUJOK0E:9092 (id: 2147483647 rack: null)
+2022-06-14 09:43:06.819  INFO 5092 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-06-14 09:43:06.820  INFO 5092 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-06-14 09:43:06.820  INFO 5092 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-06-14 09:43:06.820  INFO 5092 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-06-14 09:43:06.820  INFO 5092 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-06-14 09:43:06.820  INFO 5092 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2022-06-14 09:43:06.820  INFO 5092 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-06-14 09:43:06.845  INFO 5092 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-06-14 09:43:19.189  INFO 5092 --- [http-nio-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-14 09:43:19.189  INFO 5092 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-14 09:43:19.196  INFO 5092 --- [http-nio-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2022-06-14 09:44:07.500  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] o.s.cloud.bus.event.RefreshListener      : Received remote refresh request.
+2022-06-14 09:44:08.135  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-14 09:44:08.316  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2022-06-14 09:44:08.343  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] c.c.c.ConfigServicePropertySourceLocator : Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2022-06-14 09:44:08.344  WARN 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/application/default": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information
+2022-06-14 09:44:08.350  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2022-06-14 09:44:08.382  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] o.s.boot.SpringApplication               : Started application in 0.801 seconds (JVM running for 116.079)
+2022-06-14 09:44:10.084  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-06-14 09:44:13.108  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-06-14 09:44:13.124  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERS-WS/users-ws:a1a97a6133388ac8a0398ed29fe79216 - deregister  status: 200
+2022-06-14 09:44:13.218  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-06-14 09:44:13.222  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-06-14 09:44:13.248  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-06-14 09:44:13.249  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-14 09:44:13.267  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-06-14 09:44:13.267  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-06-14 09:44:13.267  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-06-14 09:44:13.267  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-06-14 09:44:13.267  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-06-14 09:44:13.267  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-06-14 09:44:13.267  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-06-14 09:44:13.508  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-06-14 09:44:13.517  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-06-14 09:44:13.523  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-06-14 09:44:13.541  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1655210653541 with initial instances count: 2
+2022-06-14 09:44:13.547  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application USERS-WS with eureka with status DOWN
+2022-06-14 09:44:13.547  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1655210653547, current=DOWN, previous=STARTING]
+2022-06-14 09:44:13.547  INFO 5092 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERS-WS/users-ws:3dafdc44e6fed656e570d656b086a904: registering service...
+2022-06-14 09:44:13.547  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application USERS-WS with eureka with status UP
+2022-06-14 09:44:13.547  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1655210653547, current=UP, previous=DOWN]
+2022-06-14 09:44:13.548  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] o.s.cloud.bus.event.RefreshListener      : Keys refreshed []
+2022-06-14 09:44:13.559  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] o.s.c.s.binder.DefaultBinderFactory      : Retrieving cached binder: kafka
+2022-06-14 09:44:13.688  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] o.s.c.s.b.k.p.KafkaTopicProvisioner      : Using kafka topic for outbound: springCloudBus
+2022-06-14 09:44:13.689  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [http://localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2022-06-14 09:44:13.695  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.1.1
+2022-06-14 09:44:13.695  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 97671528ba54a138
+2022-06-14 09:44:13.695  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1655210653695
+2022-06-14 09:44:13.721  INFO 5092 --- [kafka-admin-client-thread | adminclient-2] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for adminclient-2 unregistered
+2022-06-14 09:44:13.725  INFO 5092 --- [kafka-admin-client-thread | adminclient-2] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2022-06-14 09:44:13.725  INFO 5092 --- [kafka-admin-client-thread | adminclient-2] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2022-06-14 09:44:13.725  INFO 5092 --- [kafka-admin-client-thread | adminclient-2] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2022-06-14 09:44:13.736  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] o.a.k.clients.producer.ProducerConfig    : Idempotence will be disabled because acks is set to 1, not set to 'all'.
+2022-06-14 09:44:13.737  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [http://localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2022-06-14 09:44:13.782  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.1.1
+2022-06-14 09:44:13.782  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 97671528ba54a138
+2022-06-14 09:44:13.783  INFO 5092 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERS-WS/users-ws:3dafdc44e6fed656e570d656b086a904 - registration status: 204
+2022-06-14 09:44:13.783  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1655210653782
+2022-06-14 09:44:13.827  INFO 5092 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Resetting the last seen epoch of partition springCloudBus-0 to 0 since the associated topicId changed from null to TXqRQ_RJS7uOvV0y6UpbVg
+2022-06-14 09:44:13.828  INFO 5092 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: 6NcjgLIESsO7ZMSvcsEuvA
+2022-06-14 09:44:13.843  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'unknown.channel.name' has 1 subscriber(s).
+2022-06-14 09:44:13.845  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] o.s.c.s.binder.kafka.KafkaBinderMetrics  : Try to shutdown the old scheduler with 1 threads
+2022-06-14 09:44:13.852  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] o.s.c.s.binder.DefaultBinderFactory      : Retrieving cached binder: kafka
+2022-06-14 09:47:12.585  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] o.s.cloud.bus.event.RefreshListener      : Received remote refresh request.
+2022-06-14 09:47:12.957  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-14 09:47:13.140  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2022-06-14 09:47:13.166  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] c.c.c.ConfigServicePropertySourceLocator : Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2022-06-14 09:47:13.167  WARN 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/application/default": Connection refused: no further information; nested exception is java.net.ConnectException: Connection refused: no further information
+2022-06-14 09:47:13.169  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] o.s.boot.SpringApplication               : No active profile set, falling back to 1 default profile: "default"
+2022-06-14 09:47:13.185  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] o.s.boot.SpringApplication               : Started application in 0.596 seconds (JVM running for 300.881)
+2022-06-14 09:47:14.817  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-06-14 09:47:17.835  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-06-14 09:47:17.845  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERS-WS/users-ws:3dafdc44e6fed656e570d656b086a904 - deregister  status: 200
+2022-06-14 09:47:17.938  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-06-14 09:47:17.939  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-06-14 09:47:17.967  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-06-14 09:47:17.968  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-06-14 09:47:17.984  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-06-14 09:47:17.984  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-06-14 09:47:17.985  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-06-14 09:47:17.986  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-06-14 09:47:17.986  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-06-14 09:47:17.986  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-06-14 09:47:17.986  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-06-14 09:47:18.140  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-06-14 09:47:18.146  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-06-14 09:47:18.152  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-06-14 09:47:18.170  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1655210838170 with initial instances count: 2
+2022-06-14 09:47:18.173  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application USERS-WS with eureka with status DOWN
+2022-06-14 09:47:18.173  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1655210838173, current=DOWN, previous=STARTING]
+2022-06-14 09:47:18.173  INFO 5092 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERS-WS/users-ws:5ad83656c40fb335097b113f75a6cf75: registering service...
+2022-06-14 09:47:18.173  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application USERS-WS with eureka with status UP
+2022-06-14 09:47:18.176  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1655210838176, current=UP, previous=DOWN]
+2022-06-14 09:47:18.176  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] o.s.cloud.bus.event.RefreshListener      : Keys refreshed []
+2022-06-14 09:47:18.177  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] o.s.c.s.binder.DefaultBinderFactory      : Retrieving cached binder: kafka
+2022-06-14 09:47:18.433  INFO 5092 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERS-WS/users-ws:5ad83656c40fb335097b113f75a6cf75 - registration status: 204
+2022-06-14 09:47:18.434  INFO 5092 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERS-WS/users-ws:5ad83656c40fb335097b113f75a6cf75: registering service...
+2022-06-14 09:47:18.445  INFO 5092 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERS-WS/users-ws:5ad83656c40fb335097b113f75a6cf75 - registration status: 204
+2022-06-14 09:51:35.156  INFO 5092 --- [KafkaConsumerDestination{consumerDestinationName='springCloudBus', partitions=1, dlqName='null'}.container-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-anonymous.ea691378-1166-4c98-933b-972070062f8c-2, groupId=anonymous.ea691378-1166-4c98-933b-972070062f8c] Node -1 disconnected.
